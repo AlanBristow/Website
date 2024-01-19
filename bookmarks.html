@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Home Page</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+            height: flex;
+            /*margin: 10px;*/
+            margin-left: 270px;
+            margin-right: 270px;
+            background-image: url('file:///C:/Users/alan/OneDrive/CustomBookmarks/Images/background.png'); /* Replace with the path to your background image */
+            background-size: cover;
+            /*background-color: #636060;*/
+            transform: scale(1.5); /* Apply a 25% scale-up */
+            transform-origin: top; /* Set the transformation origin to the top */
+        }
+
+        /*body::before {
+            content: '';
+            position: fixed;
+            z-index: -1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: inherit;
+            filter: blur(10px);
+        }*/
+
+        .header {
+            width: 100%;
+            text-align: center;     
+            color: #333333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title-box {
+            display: flex;
+            align-items: center;
+            margin: 5px;
+            background-color: rgba(174, 174, 174, 0.4); /* Set the RGB values and opacity as needed */
+            border: 3px solid #000000;
+            border-radius: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #333333;
+        }
+
+        .title-image {
+            width: 35px; /* Set the width of the title images */
+            height: 35px; /* Set the height of the title images */
+            margin: 10px; /* Add margin for spacing between the images and the title text */
+        }
+
+        .box {
+            width: 200px;
+            margin: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: rgba(235, 234, 234, 0.75); /* Set the RGB values and opacity as needed */
+            border: 2px solid #333333;
+            border-radius: 15px;
+            text-align: center;
+            text-decoration: none;
+            color: #333333;
+        }
+
+        .title-text {
+            margin-bottom:25px;
+            font-size: 1.7em;
+            font-weight: bold;
+            color: #000000;
+            padding-bottom: 3px; /* Add padding to separate the title and links */
+            border-bottom: 2px solid #000000; /* Add a border to create a dividing line */
+        }
+
+        .title {
+            margin-bottom: 10px;
+            font-size: 1.4em;
+            font-weight: bold;
+            padding-bottom: 3px; /* Add padding to separate the title and links */
+            border-bottom: 1px solid #333333; /* Add a border to create a dividing line */
+            width: 70%;
+        }
+
+        .logo {
+            width: 40px; /* Set the width of the logo */
+            height: 40px; /* Set the height of the logo */
+            margin-bottom: 5px; /* Add margin for spacing */
+        }
+        
+        .link {
+            display: flex;
+            /*flex-direction: column;*/
+            align-items: center;
+            text-decoration: none;
+            color: #000000;
+            margin-bottom: 5px;
+        }
+
+        .link img {
+            width: 20px; /* Set the width of the link icon */
+            height: 20px; /* Set the height of the link icon */
+            margin-right: 5px; /* Add margin for spacing between the logo and the link text */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title-box">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\link1.png" alt="Title Image Before" class="title-image">
+            <h1 class="title-text">Link Library</h1>
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\link2.png" alt="Title Image After" class="title-image">
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\college.png" alt="Logo Above Box 1" class="logo">
+        <div class="title">College</div>
+        <a href="https://moodle.maynoothuniversity.ie/my/" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\moodle.png" alt="Logo 1" class="logo">
+            Moodle
+        </a>
+        <a href="https://outlook.office.com/mail/" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\outlook.png" alt="Logo 2" class="logo">
+            Outlook
+        </a> 
+        <a href="https://maynoothuniversity-my.sharepoint.com/personal/alan_bristow_2021_mumail_ie/_layouts/15/onedrive.aspx?login_hint=ALAN%2EBRISTOW%2E2021%40MUMAIL%2EIE&view=1" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\onedrive.png" alt="Logo 3" class="logo">
+            Onedrive
+        </a>
+        <a href="https://www.office.com/?auth=2" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\office.png" alt="Logo 3" class="logo">
+            Office 365
+        </a>
+        <a href="https://www.maynoothuniversity.ie/current-students" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\mu.png" alt="Logo 3" class="logo">
+            MU Web
+        </a>
+    </div>
+
+    <div class="box">
+        <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\media.png" alt="Logo Above Box 2" class="logo">
+        <div class="title">Media</div>
+        <a href="https://www.youtube.com/" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\youtube.png" alt="Logo 4" class="logo">
+            YouTube
+        </a>
+        <a href="https://www.reddit.com/" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\reddit.png" alt="Logo 4" class="logo">
+            Reddit
+        </a>
+        <a href="https://twitter.com/home?lang=en" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\twitter.png" alt="Logo 4" class="logo">
+            Twitter
+        </a>
+        <a href="https://www.audible.co.uk/library/titles?loginAttempt=true&pf_rd_p=a9e8e530-5c1c-4076-b724-0bc542daeadb&pf_rd_r=H2J2AR8MEQ38MX342FNB&ref=a_hp_t1_navTop_pl0" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\audible.png" alt="Logo 4" class="logo">
+            Audible
+        </a>
+        <a href="https://www.twitch.tv/" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\twitch.png" alt="Logo 4" class="logo">
+            Twitch
+        </a>
+        <a href="https://www.netflix.com/ie/login?nextpage=https%3A%2F%2Fwww.netflix.com%2Fbrowse" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\netflix.png" alt="Logo 4" class="logo">
+            Netflix
+        </a>
+        <a href="https://www.disneyplus.com/en-ie" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\disney.png" alt="Logo 4" class="logo">
+            Disney+
+        </a>
+    </div>
+
+    <div class="box">
+        <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\bank.png" alt="Logo Above Box 2" class="logo">
+        <div class="title">Banking</div>
+        <a href="https://onlinebanking.aib.ie/inet/roi/login.htm?_ga=2.202748948.465607061.1585643220-1748466292.1579600215" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\aib.png" alt="Logo 4" class="logo">
+            AIB
+        </a>
+        <a href="https://app.revolut.com/home" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\revolut.png" alt="Logo 5" class="logo">
+            Revolut
+        </a>
+        <a href="https://www.paypal.com/myaccount/summary" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\paypal.png" alt="Logo 5" class="logo">
+            PayPal
+        </a>
+        <a href="https://www.ros.ie/myaccount-web/sign_in.html?execution=e1s1" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\revenue.png" alt="Logo 5" class="logo">
+            Revenue
+        </a>
+        <a href="https://app.prolific.com/studies" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\prolific.png" alt="Logo 5" class="logo">
+            Prolific
+        </a>
+    </div>
+
+    <div class="box">
+        <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\productivity.png" alt="Logo Above Box 3" class="logo">
+        <div class="title">Productivity</div>
+        <a href="https://chat.openai.com/" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\gpt.png" alt="Logo 6" class="logo">
+            ChatGPT
+        </a>
+        <a href="https://www.bing.com/search?form=NTPCHB&q=Bing+AI&showconv=1" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\bingai.png" alt="Logo 6" class="logo">
+            Bing AI
+        </a>
+        <a href="https://mail.google.com/mail/u/0/#inbox" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\gmail.png" alt="Logo 7" class="logo">
+            Gmail
+        </a>
+        <a href="https://calendar.google.com/calendar/u/0/r" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\calendar.png" alt="Logo 7" class="logo">
+            Calendar
+        </a>
+        <a href="https://photos.google.com/?pli=1" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\photos.png" alt="Logo 8" class="logo">
+            Photos
+        </a>
+        <a href="https://github.com/AlanBristow" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\github.png" alt="Logo 7" class="logo">
+            GitHub
+        </a>
+        <a href="https://www.amazon.co.uk/" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\amazon.png" alt="Logo 8" class="logo">
+            Amazon
+        </a>
+        <a href="https://www.ebay.ie/" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\ebay.png" alt="Logo 7" class="logo">
+            Ebay
+        </a>
+        <a href="https://ie.rs-online.com/web/" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\rs.png" alt="Logo 8" class="logo">
+            RS
+        </a>
+        <a href="https://www.thingiverse.com/" class="link">
+            <img src="file:///C:\Users\alan\OneDrive\CustomBookmarks\Images\thing.png" alt="Logo 8" class="logo">
+            Thingiverse
+        </a>
+    </div>
+    <!-- Add more boxes as needed -->
+
+</body>
+</html>
