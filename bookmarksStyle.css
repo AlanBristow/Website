@@ -5,12 +5,12 @@ body {
     justify-content: space-around;
     align-items: flex-start;
     height: flex;
-    /*margin: 10px;*/
+    /* margin: 10px;*/
     margin-left: 270px;
     margin-right: 270px;
     background-image: url("Images/Bookmarks/background.png"); /* Replace with the path to your background image */
     background-size: cover;
-    /*background-color: #636060;*/
+    /* background-color: #636060;*/
     transform: scale(1.5); /* Apply a 25% scale-up */
     transform-origin: top; /* Set the transformation origin to the top */
 }
