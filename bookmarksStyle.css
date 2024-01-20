@@ -1,0 +1,109 @@
+/* bookmarksStyle.css */
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: flex;
+    /*margin: 10px;*/
+    margin-left: 270px;
+    margin-right: 270px;
+    background-image: url('file:///C:/Users/alan/OneDrive/CustomBookmarks/Images/background.png'); /* Replace with the path to your background image */
+    background-size: cover;
+    /*background-color: #636060;*/
+    transform: scale(1.5); /* Apply a 25% scale-up */
+    transform-origin: top; /* Set the transformation origin to the top */
+}
+
+/*body::before {
+    content: '';
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: inherit;
+    filter: blur(10px);
+}*/
+
+.header {
+    width: 100%;
+    text-align: center;     
+    color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-box {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    background-color: rgba(174, 174, 174, 0.4); /* Set the RGB values and opacity as needed */
+    border: 3px solid #000000;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #333333;
+}
+
+.title-image {
+    width: 35px; /* Set the width of the title images */
+    height: 35px; /* Set the height of the title images */
+    margin: 10px; /* Add margin for spacing between the images and the title text */
+}
+
+.box {
+    width: 200px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgba(235, 234, 234, 0.75); /* Set the RGB values and opacity as needed */
+    border: 2px solid #333333;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #333333;
+}
+
+.title-text {
+    margin-bottom:25px;
+    font-size: 1.7em;
+    font-weight: bold;
+    color: #000000;
+    padding-bottom: 3px; /* Add padding to separate the title and links */
+    border-bottom: 2px solid #000000; /* Add a border to create a dividing line */
+}
+
+.title {
+    margin-bottom: 10px;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding-bottom: 3px; /* Add padding to separate the title and links */
+    border-bottom: 1px solid #333333; /* Add a border to create a dividing line */
+    width: 70%;
+}
+
+.logo {
+    width: 40px; /* Set the width of the logo */
+    height: 40px; /* Set the height of the logo */
+    margin-bottom: 5px; /* Add margin for spacing */
+}
+
+.link {
+    display: flex;
+    /*flex-direction: column;*/
+    align-items: center;
+    text-decoration: none;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.link img {
+    width: 20px; /* Set the width of the link icon */
+    height: 20px; /* Set the height of the link icon */
+    margin-right: 5px; /* Add margin for spacing between the logo and the link text */
+}
