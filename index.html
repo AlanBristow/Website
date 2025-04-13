@@ -1,19 +1,113 @@
-<!-- index.html (Home Page) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Background Website</title>
     <link rel="stylesheet" href="style.css">
-    <title>My Website - Home</title>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is the home page.</p>
+    <!--<div class="container">
+        <h1>Welcome to My Website</h1>
+        <p>This is a simple webpage with a custom background image.</p>
+    </div> -->
 
-    <!-- Add buttons for navigation -->
-    <a href="subpage.html">
-        <button>Go to Subpage</button>
-    </a>
+    <!-- Hamburger menu bar -->
+    <div class="menu-bar" id="menuBar">
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- Sidebar menu -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- 3D cube section in the center with absolute positioning -->
+    <div class="cube-container">
+        <div id="cubeCanvas"></div>
+    </div>
+
+    <!-- Include Three.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // Scene setup
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ alpha: true }); // Enable alpha channel
+        renderer.setClearColor(0x000000, 0); // Set background to transparent
+
+        // Append renderer's canvas to cube container
+        const container = document.getElementById('cubeCanvas');
+        container.appendChild(renderer.domElement);
+
+        // Cube geometry (basic box)
+        const geometry = new THREE.BoxGeometry();
+        const edges = new THREE.EdgesGeometry(geometry);
+        const material = new THREE.LineBasicMaterial({ color: 0xADD8E6, linewidth: 5000 }); // Thicker lines
+        const cube = new THREE.LineSegments(edges, material);
+        scene.add(cube);
+
+        // Camera position
+        camera.position.z = 3;
+
+        // Resize function for the renderer
+        function resizeRendererToContainer() {
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            renderer.setSize(width, height);
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
+        }
+
+        // Variables to track mouse position
+        let mouseX = 0;
+        let mouseY = 0;
+
+        // Update mouse position
+        window.addEventListener('mousemove', (event) => {
+            const rect = container.getBoundingClientRect();
+            const containerWidth = rect.width;
+            const containerHeight = rect.height;
+
+            // Normalize mouse coordinates to range [-1, 1]
+            mouseX = ((event.clientX - rect.left) / containerWidth) * 2 - 1;
+            mouseY = ((event.clientY - rect.bottom) / containerHeight) * 2 - 1;
+        });
+
+        // Animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+
+            // Make the cube rotation follow the mouse
+            cube.rotation.x = mouseY * Math.PI / 2; // Scale rotation by a factor (e.g., PI/2)
+            cube.rotation.y = -mouseX * Math.PI / 2;
+
+            // Render the scene
+            resizeRendererToContainer();
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // Handle window resizing
+        window.addEventListener('resize', resizeRendererToContainer);
+
+        // Hamburger menu toggle functionality
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        const sidebar = document.getElementById('sidebar');
+        const menuBar = document.getElementById('menuBar');
+
+        hamburgerMenu.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+            menuBar.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

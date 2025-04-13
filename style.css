@@ -1,11 +1,129 @@
-/* style.css */
+/* General body styles */
 body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/home/alan/Documents/Website/MainPageBackgroundEdited.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 20px;
+    color: white;
+    text-align: center;
 }
 
-h1 {
-    color: #007bff;
+/* Main container styling */
+.container {
+    padding: 50px;
+}
+
+/* Center the cube */
+.cube-container {
+    width: 100vmin;
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensure the Three.js canvas fills the container */
+#cubeCanvas {
+    width: 100%;
+    height: 100%;
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+    position: fixed;
+    top: 20px;
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hamburger-menu .bar {
+    width: 100%;
+    height: 4px;
+    background-color: #ADD8E6; /* Match cube color */
+    border-radius: 2px;
+}
+
+/* Menu bar styles */
+.menu-bar {
+    position: fixed;
+    top: 0;
+    right: 0; /* Move the menu bar to the right */
+    width: 50px;
+    height: 100%;
+    background-color: rgba(95, 95, 95, 0.95);
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items to the top */
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.menu-bar.active {
+    right: 0;
+}
+
+/* Adjust hamburger menu inside the menu bar */
+.menu-bar .hamburger-menu {
+    margin-top: 20px; /* Add spacing from the top */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; /* Center horizontally within the bar */
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Move the sidebar to the right */
+    width: 250px;
+    height: 100%;
+    background-color: rgba(95, 95, 95, 0.95);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 999;
+}
+
+.sidebar.active {
+    right: 50px; /* Align with the menu bar */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: #ADD8E6; /* Match cube color */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: white; /* Change to white on hover for contrast */
 }
